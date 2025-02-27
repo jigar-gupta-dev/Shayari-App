@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayari & Poetry Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+    <!-- Unity Ads SDK -->
+    <script src="https://webgame-ads.unityads.unity3d.com/webgame/adsjs/unity-v1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Shayari & Poetry Collection</h1>
+            </div>
+            <div class="controls">
+                <select id="language-selector">
+                    <option value="all">All Languages</option>
+                    <option value="urdu">Urdu</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="english">English</option>
+                </select>
+                <select id="category-selector">
+                    <option value="all">All Categories</option>
+                    <option value="love">Love</option>
+                    <option value="life">Life</option>
+                    <option value="philosophy">Philosophy</option>
+                    <option value="nature">Nature</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+                <button class="theme-toggle" id="theme-toggle">🌙</button>
+            </div>
+        </header>
+        
+        <div class="ad-banner" id="ad-banner-top">
+            <!-- Unity Ads Banner will be inserted here -->
+            <div id="unity-ad-container-top"></div>
+        </div>
+        
+        <div class="poetry-container" id="poetry-container">
+            <!-- Poetry cards will be populated here -->
+        </div>
+        
+        <div class="loading" id="loading-indicator">
+            Loading more poetry...
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <!-- Pagination buttons will be populated here -->
+        </div>
+        
+        <div class="ad-banner" id="ad-banner-bottom">
+            <!-- Unity Ads Banner will be inserted here -->
+            <div id="unity-ad-container-bottom"></div>
+        </div>
+    </div>
+    
+    <div class="modal" id="poetry-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-poetry" id="modal-poetry"></div>
+            <div class="modal-author" id="modal-author"></div>
+            <div class="share-options">
+                <button class="share-button" id="copy-button">📋 Copy</button>
+                <button class="share-button" id="share-button">🔗 Share</button>
+                <button class="share-button" id="download-button">⬇️ Download</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
